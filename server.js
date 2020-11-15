@@ -14,6 +14,7 @@ const productOptionRoutes = require("./routes/product_options");
 const productOptionDataRoutes = require("./routes/product_options_data");
 const cartRoutes = require("./routes/cart");
 const invoiceRoutes = require("./routes/invoice");
+const userRoutes = require("./routes/user");
 // Аппын тохиргоог process.env рүү ачаалах
 dotenv.config({ path: "./config/config.env" });
 
@@ -37,6 +38,7 @@ app.use("/api/v1/product_options", productOptionRoutes);
 app.use("/api/v1/product_options_data", productOptionDataRoutes);
 app.use("/api/v1/cart", cartRoutes);
 app.use("/api/v1/invoice", invoiceRoutes);
+app.use("/api/v1/user", userRoutes);
 app.use(errorHandler);
 
 const server = app.listen(
