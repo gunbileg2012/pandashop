@@ -2,7 +2,7 @@
 const express = require("express");
 
 const {
-  getCarts,
+  getUsers,
   getUser,
   createUser,
   updateUser,
@@ -18,7 +18,6 @@ router.route("/")
 .post(createUser);
 
 router.route("/:id")
-.post(createInvoice)
 .get(getUser)
 .put(updateUser)
 .delete(deleteUser);

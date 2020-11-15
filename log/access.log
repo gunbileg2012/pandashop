@@ -52,3 +52,5 @@
 ::1 - - [15/Nov/2020:06:08:09 +0000] "GET /api/v1/invoice/5faecf53d550b53453f623cd HTTP/1.1" 400 44 "-" "PostmanRuntime/7.26.8"
 ::1 - - [15/Nov/2020:06:08:42 +0000] "GET /api/v1/invoice/5fb0bf043e3c504392b61473 HTTP/1.1" 200 738 "-" "PostmanRuntime/7.26.8"
 ::1 - - [15/Nov/2020:06:09:25 +0000] "GET /api/v1/cart/ HTTP/1.1" 200 601 "-" "PostmanRuntime/7.26.8"
+::1 - - [15/Nov/2020:06:50:03 +0000] "POST /api/v1/user/ HTTP/1.1" 200 279 "-" "PostmanRuntime/7.26.8"
+::1 - - [15/Nov/2020:06:51:00 +0000] "GET /api/v1/user/5fb0cf885fb7246467425b78 HTTP/1.1" 200 279 "-" "PostmanRuntime/7.26.8"
