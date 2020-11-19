@@ -54,3 +54,4 @@
 ::1 - - [15/Nov/2020:06:09:25 +0000] "GET /api/v1/cart/ HTTP/1.1" 200 601 "-" "PostmanRuntime/7.26.8"
 ::1 - - [15/Nov/2020:06:50:03 +0000] "POST /api/v1/user/ HTTP/1.1" 200 279 "-" "PostmanRuntime/7.26.8"
 ::1 - - [15/Nov/2020:06:51:00 +0000] "GET /api/v1/user/5fb0cf885fb7246467425b78 HTTP/1.1" 200 279 "-" "PostmanRuntime/7.26.8"
+::1 - - [18/Nov/2020:10:50:47 +0000] "GET /api/v1/user/ HTTP/1.1" 200 281 "-" "PostmanRuntime/7.26.8"

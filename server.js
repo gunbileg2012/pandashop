@@ -5,6 +5,7 @@ var rfs = require("rotating-file-stream");
 const connectDB = require("./config/db");
 const colors = require("colors");
 const errorHandler = require("./middleware/error");
+const corsMiddleware = require("./middleware/cors");
 var morgan = require("morgan");
 const logger = require("./middleware/logger");
 // Router оруулж ирэх
@@ -31,6 +32,7 @@ var accessLogStream = rfs.createStream("access.log", {
 // Body parser
 app.use(express.json());
 app.use(logger);
+app.use(corsMiddleware);
 app.use(morgan("combined", { stream: accessLogStream }));
 app.use("/api/v1/product", productRoutes);
 app.use("/api/v1/categories", categoriesRoutes);
