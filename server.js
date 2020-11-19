@@ -2,10 +2,10 @@ const express = require("express");
 const dotenv = require("dotenv");
 var path = require("path");
 var rfs = require("rotating-file-stream");
+var cors = require('cors')
 const connectDB = require("./config/db");
 const colors = require("colors");
 const errorHandler = require("./middleware/error");
-const corsMiddleware = require("./middleware/cors");
 var morgan = require("morgan");
 const logger = require("./middleware/logger");
 // Router оруулж ирэх
@@ -20,7 +20,7 @@ const userRoutes = require("./routes/user");
 dotenv.config({ path: "./config/config.env" });
 
 const app = express();
-
+app.use(cors());
 connectDB();
 
 // create a write stream (in append mode)
@@ -32,7 +32,7 @@ var accessLogStream = rfs.createStream("access.log", {
 // Body parser
 app.use(express.json());
 app.use(logger);
-app.use(corsMiddleware);
+
 app.use(morgan("combined", { stream: accessLogStream }));
 app.use("/api/v1/product", productRoutes);
 app.use("/api/v1/categories", categoriesRoutes);
